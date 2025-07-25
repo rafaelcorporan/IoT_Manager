@@ -10,10 +10,18 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Optional: Add basePath if your app is not served from the root
-  // basePath: '/your-base-path',
-  // Optional: Enable React Strict Mode
+  // Disable the static HTML generation for 404 pages
+  generateEtags: false,
+  // Disable the static HTML generation for 500 pages
+  poweredByHeader: false,
+  // Disable the static HTML generation for 404 pages
   reactStrictMode: true,
+  // Ensure static export works with next/image
+  trailingSlash: true,
+  // Disable server-side rendering for all pages
+  distDir: 'out',
+  // Add basePath if your app is not served from the root
+  // basePath: '/your-base-path',
 }
 
 export default nextConfig
